@@ -6,8 +6,8 @@ const ChatContext = createContext();
 
 export const useChat = () => useContext(ChatContext);
 
-const BASE_URL = 'http://localhost:5000/api';
-const SOCKET_URL = 'http://localhost:5000';
+const BASE_URL = 'https://adverayze-chat.onrender.com/api';
+const SOCKET_URL = 'https://adverayze-chat.onrender.com';
 
 export const ChatProvider = ({ children }) => {
   const [messages, setMessages] = useState([]);
