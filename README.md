@@ -1,11 +1,15 @@
 # Real-Time Chat Application - Technical Assignment
 
+## Live Deployment
+- **Frontend (Vercel):** [https://adverayze-chat.vercel.app/](https://adverayze-chat.vercel.app/)
+- **Backend (Render):** [https://adverayze-chat.onrender.com](https://adverayze-chat.onrender.com)
+
 ## Project Overview
 A full-stack real-time chat application built for the Adverayze technical assignment. The application supports sending messages, pinning important conversations, and deleting messages (for self or everyone) with real-time updates.
 
 ## Tech Stack
-- **Frontend:** React.js, Context API, Socket.io-client, Lucide-React
-- **Backend:** Node.js, Express.js, Socket.io
+- **Frontend:** React.js, Context API, Socket.io-client, Lucide-React, CSS
+- **Backend:** Node.js, Express.js, Socket.io (MVC Architecture)
 - **Database:** MongoDB (Atlas), Mongoose
 - **Icons:** Lucide-React
 - **Date Handling:** date-fns
@@ -46,3 +50,8 @@ A full-stack real-time chat application built for the Adverayze technical assign
 - **Soft Deletion Assumption (Requirement 4.2):** Based on user preference, "Delete for me" replaces content with a "deleted" placeholder rather than removing the message item entirely from the DOM. This provides a consistent visual record while protecting the privacy of the deleted content.
 - **Scalability (Requirement 8.1):** MongoDB with proper indexing and Mongoose schemas ensure we can handle well over the 100-message requirement.
 - **Error Handling (Requirement 8.2):** Implemented backend validation to prevent empty or oversized message storage.
+
+## Deployment Details (Requirement 9)
+- **Frontend:** Deployed on **Vercel** with automatic deployments from the GitHub `master` branch.
+- **Backend:** Deployed on **Render** using a Web Service.
+- **CORS:** Securely configured to only allow requests from the specific Vercel frontend domain.
