@@ -10,18 +10,20 @@ const authRoutes = require('./routes/authRoutes');
 // Connect to Database
 connectDB();
 
+const frontendUrl = process.env.FRONTEND_URL ? process.env.FRONTEND_URL.replace(/\/$/, "") : "*";
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || "*", 
+    origin: frontendUrl, 
     methods: ["GET", "POST", "PATCH", "DELETE"]
   }
 });
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*"
+  origin: frontendUrl
 }));
 app.use(express.json());
 
